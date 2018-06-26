@@ -19,7 +19,7 @@ namespace XF.Contatos.Droid
         public async void GetCoordenada()
         {
             var locator = CrossGeolocator.Current;
-            locator.DesiredAccuracy = 50;
+            locator.DesiredAccuracy = 30;
             var position = await locator.GetPositionAsync(timeout: TimeSpan.FromSeconds(1));
 
             SetCoordenada(position.Latitude, position.Longitude);

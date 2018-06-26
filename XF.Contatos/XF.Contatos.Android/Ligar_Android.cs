@@ -17,7 +17,7 @@ namespace XF.Contatos.Droid
             if (context == null) return false;
 
             var intent = new Intent(Intent.ActionCall);
-            intent.SetData(Uri.Parse("tel:" + telefone));
+            intent.SetData(Uri.Parse("cel:" + telefone));
 
             if (IsIntentAvailable(context, intent))
             {
